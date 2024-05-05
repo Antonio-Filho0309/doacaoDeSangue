@@ -279,16 +279,31 @@ public class doacaoDeSangue {
                 String nomeAgend = JOptionPane.showInputDialog("Agende seu horário:\r\n" +
                                 " \r\n" +
                                 " Informe o seu nome:  ");
+                if (nomeAgend == null)
+                        return;
 
-                String dataAgend = JOptionPane.showInputDialog("Informe a data (dd/mm): ");
-                String hora = JOptionPane.showInputDialog("Informe o horário (00): ");
-                int horaAgend = Integer.parseInt(hora);
+                String dataAgend = JOptionPane.showInputDialog("Informe a data do agendamento (dd/mm): ");
 
-                if (horaAgend < 9 || horaAgend > 18) {
+                if (dataAgend == null)
+                        return;
+                String horas = JOptionPane.showInputDialog("Informe o horário (hh:mm): ");
+                if (horas == null)
+                        return;
+
+                if (!horas.matches("([01]?[0-9]|2[0-3]):[0-5][0-9]")) {
                         JOptionPane.showMessageDialog(null, "Preencha os campos corretamente!");
                 } else {
-                        JOptionPane.showMessageDialog(null, "Agendamento feito com sucesso\r\n" +
-                                        nomeAgend + " " + dataAgend + " às " + horaAgend + "h");
+                        String[] horario = horas.split(":");
+                        int hora = Integer.parseInt(horario[0]);
+                        int minuto = Integer.parseInt(horario[1]);
+
+                        if (hora < 9 || (hora == 18 && minuto > 0) || hora > 18) {
+                                JOptionPane.showMessageDialog(null,
+                                                "Horário fora do intervalo permitido. Por favor, escolha um horário entre 09:00 e 18:00.");
+                        } else {
+                                JOptionPane.showMessageDialog(null, "Agendamento feito com sucesso\r\n" +
+                                                nomeAgend + " " + dataAgend + " às " + horas + "h");
+                        }
                 }
         }
 
@@ -349,9 +364,10 @@ public class doacaoDeSangue {
                                                                                         "B-Covid-19, Gripe, Dengue\r\n"
                                                                                         +
                                                                                         "C-Gravidez, Tatuagem, Brinco");
-                                        if(quatro.equalsIgnoreCase("A")){
+                                        if (quatro.equalsIgnoreCase("A")) {
                                                 JOptionPane.showMessageDialog(null, "Certa Resposta!");
-                                                JOptionPane.showMessageDialog(null, "Parabéns, você acertou todas as nossas perguntas, esperamos que você tenha gostado do nosso  quiz!");
+                                                JOptionPane.showMessageDialog(null,
+                                                                "Parabéns, você acertou todas as nossas perguntas, esperamos que você tenha gostado do nosso  quiz!");
                                         }
 
                                 } else {
