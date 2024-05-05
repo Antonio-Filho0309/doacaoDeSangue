@@ -11,7 +11,7 @@ public class doacaoDeSangue {
                                 +
                                 " A doação de sangue é um gesto de solidariedade e uma ação essencial que ajuda hospitais \r\n a cuidar eficientemente de pacientes em emergência.\r\n"
                                 +
-                                "------------------------------------------------------------------------------------------------------------------------------------- ");
+                                "------------------------------------------------------------------------------------------------------------------------------------- " , "SISTEMA DE DOAÇÃO DE SANGUE", 1);
 
                 while (voltarMenu) {
                         String escolha = JOptionPane.showInputDialog("*MENU*\r\n" +
@@ -29,7 +29,7 @@ public class doacaoDeSangue {
                                         "\r\n" +
                                         "Escolha uma opção do menu para continuar sua   doação de sangue e fazer a diferença na vida de muitas pessoas.\r\nSe tiver dúvidas, estamos aqui para ajudar!\r\n"
                                         +
-                                        "  ---------------------------------------------------------------------------------------------------------------------------------------------");
+                                        "  ---------------------------------------------------------------------------------------------------------------------------------------------" );
 
                         if (escolha == null) {
                                 voltarMenu = false;
@@ -56,13 +56,13 @@ public class doacaoDeSangue {
                                                                         +
                                                                         "Por meio da doação, os bancos de sangue podem fornecer transfusões sanguíneas a pacientes \r\n"
                                                                         +
-                                                                        "que enfrentam condições médicas graves ou submetidos a cirurgias complexas.");
+                                                                        "que enfrentam condições médicas graves ou submetidos a cirurgias complexas." ,"SISTEMA DE DOAÇÃO DE SANGUE", 1);
                                         JOptionPane.showMessageDialog(null,
-                                                        "Obrigado por considerar a doação de sangue. Seu gesto pode salvar vidas!");
+                                                        "Obrigado por considerar a doação de sangue. Seu gesto pode salvar vidas!" ,"SISTEMA DE DOAÇÃO DE SANGUE", -1);
                                         voltarMenu = false;
                                         break;
                                 default:
-                                        JOptionPane.showMessageDialog(null, "Opção invalida tente novamente!");
+                                        JOptionPane.showMessageDialog(null, "Opção invalida tente novamente!" ,"SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                         break;
                         }
                 }
@@ -87,26 +87,26 @@ public class doacaoDeSangue {
                         Resfriado = Resfriado.toUpperCase();
 
                         if (Resfriado.equalsIgnoreCase("S")) {
-                                JOptionPane.showMessageDialog(null, "Usuário não apto a doação no momento");
+                                JOptionPane.showMessageDialog(null, "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                         } else {
                                 String Gravida = JOptionPane.showInputDialog("Você está gravida? [S/N] ");
                                 Gravida = Gravida.toUpperCase();
                                 if (Gravida.equalsIgnoreCase("S")) {
-                                        JOptionPane.showMessageDialog(null, "Usuário não apto a doação no momento");
+                                        JOptionPane.showMessageDialog(null, "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                 } else {
                                         String Alcool = JOptionPane.showInputDialog(
                                                         "Você ingeriu álcool nas ultimas 12 horas? [S/N]");
                                         Alcool = Alcool.toUpperCase();
                                         if (Alcool.equalsIgnoreCase("S")) {
                                                 JOptionPane.showMessageDialog(null,
-                                                                "Usuário não apto a doação no momento");
+                                                                "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                         } else {
                                                 String Tinta = JOptionPane.showInputDialog(
                                                                 "Você fez tatuagem, maquiagem definitiva ou micropigmentação nos ultimos 6 meses? [S/N]");
                                                 Tinta = Tinta.toUpperCase();
                                                 if (Tinta.equalsIgnoreCase("S")) {
                                                         JOptionPane.showMessageDialog(null,
-                                                                        "Usuário não apto a doação no momento");
+                                                                        "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                 } else {
                                                         String Ferro = JOptionPane
                                                                         .showInputDialog(
@@ -114,7 +114,7 @@ public class doacaoDeSangue {
                                                         Ferro = Ferro.toUpperCase();
                                                         if (Ferro.equalsIgnoreCase("S")) {
                                                                 JOptionPane.showMessageDialog(null,
-                                                                                "Usuário não apto a doação no momento");
+                                                                                "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                         } else {
                                                                 String risco = JOptionPane.showInputDialog(
                                                                                 "Você já esteve em situações nas quais há maior risco de adquirir doenças sexualmente transmissíveis? [S/N]");
@@ -122,14 +122,14 @@ public class doacaoDeSangue {
                                                                 risco = risco.toUpperCase();
                                                                 if (risco.equalsIgnoreCase("S")) {
                                                                         JOptionPane.showMessageDialog(null,
-                                                                                        "Usuário não apto a doação no momento");
+                                                                                        "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                                 } else {
                                                                         String vacina = JOptionPane.showInputDialog(
                                                                                         "Você se vacinou contra gripe, covid-19 ou dengue nas ultimas 4 semanas? [S/N] ");
                                                                         vacina = vacina.toUpperCase();
                                                                         if (vacina.equalsIgnoreCase("S")) {
                                                                                 JOptionPane.showMessageDialog(null,
-                                                                                                "Usuário não apto a doação no momento");
+                                                                                                "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                                         } else {
                                                                                 String doencas = JOptionPane
                                                                                                 .showInputDialog(
@@ -138,7 +138,7 @@ public class doacaoDeSangue {
                                                                                 if (doencas.equalsIgnoreCase("S")) {
                                                                                         JOptionPane.showMessageDialog(
                                                                                                         null,
-                                                                                                        "Usuário não apto a doação no momento");
+                                                                                                        "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                                                 } else {
                                                                                         String doencasDefinitivas = JOptionPane
                                                                                                         .showInputDialog(
@@ -150,7 +150,7 @@ public class doacaoDeSangue {
                                                                                                                         "S")) {
                                                                                                 JOptionPane.showMessageDialog(
                                                                                                                 null,
-                                                                                                                "Usuário não apto a doação no momento");
+                                                                                                                "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                                                         } else {
                                                                                                 String doacaoM = JOptionPane
                                                                                                                 .showInputDialog(
@@ -160,11 +160,11 @@ public class doacaoDeSangue {
                                                                                                                                 "S")) {
                                                                                                         JOptionPane.showMessageDialog(
                                                                                                                         null,
-                                                                                                                        "Usuário não apto a doação no momento");
+                                                                                                                        "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                                                                 } else {
                                                                                                         JOptionPane.showMessageDialog(
                                                                                                                         null,
-                                                                                                                        "Usuário apto a doar sangue no momento");
+                                                                                                                        "Usuário apto a doar sangue no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                                                                 }
                                                                                         }
                                                                                 }
@@ -181,21 +181,21 @@ public class doacaoDeSangue {
                         Resfriado = Resfriado.toUpperCase();
 
                         if (Resfriado.equalsIgnoreCase("S")) {
-                                JOptionPane.showMessageDialog(null, "Usuário não apto a doação no momento");
+                                JOptionPane.showMessageDialog(null, "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                         } else {
                                 String Alcool = JOptionPane.showInputDialog(
                                                 "Você ingeriu álcool nas ultimas 12 horas? [S/N]");
                                 Alcool = Alcool.toUpperCase();
                                 if (Alcool.equalsIgnoreCase("S")) {
                                         JOptionPane.showMessageDialog(null,
-                                                        "Usuário não apto a doação no momento");
+                                                        "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                 } else {
                                         String Tinta = JOptionPane.showInputDialog(
                                                         "Você fez tatuagem, maquiagem definitiva ou micropigmentação nos ultimos 6 meses? [S/N]");
                                         Tinta = Tinta.toUpperCase();
                                         if (Tinta.equalsIgnoreCase("S")) {
                                                 JOptionPane.showMessageDialog(null,
-                                                                "Usuário não apto a doação no momento");
+                                                                "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                         } else {
                                                 String Ferro = JOptionPane
                                                                 .showInputDialog(
@@ -203,7 +203,7 @@ public class doacaoDeSangue {
                                                 Ferro = Ferro.toUpperCase();
                                                 if (Ferro.equalsIgnoreCase("S")) {
                                                         JOptionPane.showMessageDialog(null,
-                                                                        "Usuário não apto a doação no momento");
+                                                                        "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                 } else {
                                                         String risco = JOptionPane.showInputDialog(
                                                                         "Você já esteve em situações nas quais há maior risco de adquirir doenças sexualmente transmissíveis? [S/N]");
@@ -211,14 +211,14 @@ public class doacaoDeSangue {
                                                         risco = risco.toUpperCase();
                                                         if (risco.equalsIgnoreCase("S")) {
                                                                 JOptionPane.showMessageDialog(null,
-                                                                                "Usuário não apto a doação no momento");
+                                                                                "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                         } else {
                                                                 String vacina = JOptionPane.showInputDialog(
                                                                                 "Você se vacinou contra gripe, covid-19 ou dengue nas ultimas 4 semanas? [S/N] ");
                                                                 vacina = vacina.toUpperCase();
                                                                 if (vacina.equalsIgnoreCase("S")) {
                                                                         JOptionPane.showMessageDialog(null,
-                                                                                        "Usuário não apto a doação no momento");
+                                                                                        "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                                 } else {
                                                                         String doencas = JOptionPane
                                                                                         .showInputDialog(
@@ -227,7 +227,7 @@ public class doacaoDeSangue {
                                                                         if (doencas.equalsIgnoreCase("S")) {
                                                                                 JOptionPane.showMessageDialog(
                                                                                                 null,
-                                                                                                "Usuário não apto a doação no momento");
+                                                                                                "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                                         } else {
                                                                                 String doencasDefinitivas = JOptionPane
                                                                                                 .showInputDialog(
@@ -239,7 +239,7 @@ public class doacaoDeSangue {
                                                                                                                 "S")) {
                                                                                         JOptionPane.showMessageDialog(
                                                                                                         null,
-                                                                                                        "Usuário não apto a doação no momento");
+                                                                                                        "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                                                 } else {
                                                                                         String doacaoM = JOptionPane
                                                                                                         .showInputDialog(
@@ -251,11 +251,11 @@ public class doacaoDeSangue {
                                                                                                                         "S")) {
                                                                                                 JOptionPane.showMessageDialog(
                                                                                                                 null,
-                                                                                                                "Usuário não apto a doação no momento");
+                                                                                                                "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                                                         } else {
                                                                                                 JOptionPane.showMessageDialog(
                                                                                                                 null,
-                                                                                                                "Usuário apto a doar sangue no momento");
+                                                                                                                "Usuário apto a doar sangue no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                                                                         }
                                                                                 }
                                                                         }
@@ -266,7 +266,7 @@ public class doacaoDeSangue {
                                 }
                         }
                 } else {
-                        JOptionPane.showMessageDialog(null, "Usuário não apto a doação no momento");
+                        JOptionPane.showMessageDialog(null, "Usuário não apto a doação no momento","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                 }
         }
 
@@ -274,7 +274,7 @@ public class doacaoDeSangue {
                 JOptionPane.showMessageDialog(null, "Agendamento de Doação\r \n" +
                                 "Horários de Atendimento: 09h às 18h\r\n"
                                 +
-                                "Locais: Posto de Saúde mais próximo da sua residência");
+                                "Locais: Posto de Saúde mais próximo da sua residência" ,"SISTEMA DE DOAÇÃO DE SANGUE", 1);
 
                 String nomeAgend = JOptionPane.showInputDialog("Agende seu horário:\r\n" +
                                 " \r\n" +
@@ -291,7 +291,7 @@ public class doacaoDeSangue {
                         return;
 
                 if (!horas.matches("([01]?[0-9]|2[0-3]):[0-5][0-9]")) {
-                        JOptionPane.showMessageDialog(null, "Preencha os campos corretamente!");
+                        JOptionPane.showMessageDialog(null, "Preencha os campos corretamente!" ,"SISTEMA DE DOAÇÃO DE SANGUE", 0);
                 } else {
                         String[] horario = horas.split(":");
                         int hora = Integer.parseInt(horario[0]);
@@ -299,10 +299,10 @@ public class doacaoDeSangue {
 
                         if (hora < 9 || (hora == 18 && minuto > 0) || hora > 18) {
                                 JOptionPane.showMessageDialog(null,
-                                                "Horário fora do intervalo permitido. Por favor, escolha um horário entre 09:00 e 18:00.");
+                                                "Por favor, escolha um horário entre 09:00 e 18:00.","SISTEMA DE DOAÇÃO DE SANGUE", 0);
                         } else {
                                 JOptionPane.showMessageDialog(null, "Agendamento feito com sucesso\r\n" +
-                                                nomeAgend + " " + dataAgend + " às " + horas + "h");
+                                                nomeAgend + " " + dataAgend + " às " + horas + "h","SISTEMA DE DOAÇÃO DE SANGUE", 1);
                         }
                 }
         }
@@ -316,20 +316,20 @@ public class doacaoDeSangue {
                                 +
                                 "\r\n"
                                 + "Triagem clínica\r\n" +
-                                "Após o cadastro ocorre a triagem clínica. Uma entrevista que avalia as condições de saúde da pessoa que vai doar e os riscos para a pessoa que vai receber.\r\n Na triagem clínica, são feitas perguntas a respeito do estado de saúde do candidato à doação de sangue.\r\n A triagem clínica é utilizada, pois existem questões que podem ser identificadas na entrevista clínica e não podem ser detectada por testes laboratoriais.");
+                                "Após o cadastro ocorre a triagem clínica. Uma entrevista que avalia as condições de saúde da pessoa que vai doar e os riscos para a pessoa que vai receber.\r\n Na triagem clínica, são feitas perguntas a respeito do estado de saúde do candidato à doação de sangue.\r\n A triagem clínica é utilizada, pois existem questões que podem ser identificadas na entrevista clínica e não podem ser detectada por testes laboratoriais." ,"SISTEMA DE DOAÇÃO DE SANGUE", 1);
                 // Segundo passo: Coleta
                 JOptionPane.showMessageDialog(null, "Coleta:\r\n" +
                                 "\r"
-                                + "A coleta do sangue dura em torno de 15 minutos.\r\n Ela é feita com material esterilizado, descartável e não apresenta nenhum risco para a pessoa que está doando.");
+                                + "A coleta do sangue dura em torno de 15 minutos.\r\n Ela é feita com material esterilizado, descartável e não apresenta nenhum risco para a pessoa que está doando." ,"SISTEMA DE DOAÇÃO DE SANGUE", 1);
                 // Terceiro passo: Cuidados pós-doação
                 JOptionPane.showMessageDialog(null, "Cuidados pós-doação:\r\n" +
                                 "\r\n"
-                                + "Depois de doar sangue Faça um pequeno lanche e hidrate-se.\r\nÉ importante para o doador continuar se sentindo bem durante o dia. \r\nÉ necessário também evitar esforços físicos exagerados por pelo menos 12 horas,\r\nnão fumar por cerca de 2 horas, evitar bebidas alcóolicas por 12 horas\r\ne não dirigir veículos de grande porte, trabalhar em andaimes, praticar paraquedismo ou mergulho.");
+                                + "Depois de doar sangue Faça um pequeno lanche e hidrate-se.\r\nÉ importante para o doador continuar se sentindo bem durante o dia. \r\nÉ necessário também evitar esforços físicos exagerados por pelo menos 12 horas,\r\nnão fumar por cerca de 2 horas, evitar bebidas alcóolicas por 12 horas\r\ne não dirigir veículos de grande porte, trabalhar em andaimes, praticar paraquedismo ou mergulho.","SISTEMA DE DOAÇÃO DE SANGUE", 1);
         }
 
         public static void Quiz() {
                 JOptionPane.showMessageDialog(null, "Quiz\r\n" +
-                                "Prove seu conhecimento sobre doação de sangue com o quiz a seguir.");
+                                "Prove seu conhecimento sobre doação de sangue com o quiz a seguir." ,"SISTEMA DE DOAÇÃO DE SANGUE", 1);
 
                 String um = JOptionPane.showInputDialog(
                                 "1-A partir de qual idade você pode começar a doar sangue ?\r\n" + "\r\n"
@@ -337,7 +337,7 @@ public class doacaoDeSangue {
                                                 "B-16\r\n" +
                                                 "C-14");
                 if (um.equalsIgnoreCase("B")) {
-                        JOptionPane.showMessageDialog(null, "Certa Resposta!");
+                        JOptionPane.showMessageDialog(null, "Certa Resposta!" ,"SISTEMA DE DOAÇÃO DE SANGUE", 1);
 
                         String dois = JOptionPane.showInputDialog(
                                         "2-Quais os cuidados você tem que ter antes de doar sangue ?\r\n" + "\r\n"
@@ -347,14 +347,14 @@ public class doacaoDeSangue {
                                                         "C-Estar em boas condições de saúde, estar descansado (ter dormido pelo menos 6 horas nas últimas 24 horas) e  estar alimentado (evitar alimentação gordurosa nas 4 horas que antecedem a doação).");
 
                         if (dois.equalsIgnoreCase("C")) {
-                                JOptionPane.showMessageDialog(null, "Certa Resposta!");
+                                JOptionPane.showMessageDialog(null, "Certa Resposta!" ,"SISTEMA DE DOAÇÃO DE SANGUE", 1);
                                 String tres = JOptionPane
                                                 .showInputDialog("3-Qual o requisito de peso para doar?\r\n" + "\r\n"
                                                                 + "A-Pesar no mínimo 50 kg\r\n" +
                                                                 "B-Pesar no mínimo 50 kg e pesar menos que 140 kg\r\n" +
                                                                 "C-Pesar mais que 140 kg");
                                 if (tres.equalsIgnoreCase("B")) {
-                                        JOptionPane.showMessageDialog(null, "Certa Resposta!");
+                                        JOptionPane.showMessageDialog(null, "Certa Resposta!","SISTEMA DE DOAÇÃO DE SANGUE", 1);
                                         String quatro = JOptionPane
                                                         .showInputDialog(
                                                                         "4-Quais condições abaixo são impedimentos definitivos na doação de sangue?\r\n"
@@ -365,19 +365,19 @@ public class doacaoDeSangue {
                                                                                         +
                                                                                         "C-Gravidez, Tatuagem, Brinco");
                                         if (quatro.equalsIgnoreCase("A")) {
-                                                JOptionPane.showMessageDialog(null, "Certa Resposta!");
+                                                JOptionPane.showMessageDialog(null, "Certa Resposta!" ,"SISTEMA DE DOAÇÃO DE SANGUE", 1);
                                                 JOptionPane.showMessageDialog(null,
-                                                                "Parabéns, você acertou todas as nossas perguntas, esperamos que você tenha gostado do nosso  quiz!");
+                                                                "Parabéns, você acertou todas as nossas perguntas, esperamos que você tenha gostado do nosso  quiz!" ,"SISTEMA DE DOAÇÃO DE SANGUE", 1);
                                         }
 
                                 } else {
-                                        JOptionPane.showMessageDialog(null, "Resposta Incorreta, tente novamente!");
+                                        JOptionPane.showMessageDialog(null, "Resposta Incorreta, tente novamente!" ,"SISTEMA DE DOAÇÃO DE SANGUE", 0);
                                 }
                         } else {
-                                JOptionPane.showMessageDialog(null, "Resposta Incorreta, tente novamente!");
+                                JOptionPane.showMessageDialog(null, "Resposta Incorreta, tente novamente!", "SISTEMA DE DOAÇÃO DE SANGUE", 0);
                         }
                 } else {
-                        JOptionPane.showMessageDialog(null, "Resposta Incorreta, tente novamente!");
+                        JOptionPane.showMessageDialog(null, "Resposta Incorreta, tente novamente!", "SISTEMA DE DOAÇÃO DE SANGUE", 0);
                 }
         }
 }
